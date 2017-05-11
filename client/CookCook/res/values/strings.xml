@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CookCook</string>
+    <string name="app_name">来炒我</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="usrName">name</string>
@@ -9,5 +9,6 @@
     <string name="login">login</string>
     <string name="signup">signup</string>
     <string name="guest">guest</string>
-
+    <string name="findCook">请输入</string>
+    <string name="search">搜索</string>
 </resources>

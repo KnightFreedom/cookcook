@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height = "wrap_content"
         android:orientation="horizontal" >
 
         <AutoCompleteTextView
             android:id="@+id/searchTxt"
-            android:layout_width="232dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:ems="10"
-            android:text="find cook" >
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/searchBtn"
+            android:ems="10" >
 
             <requestFocus />
         </AutoCompleteTextView>
@@ -24,7 +25,24 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="search" />
-    </LinearLayout>
+            android:layout_alignParentRight="true"
+            android:text="@string/search" />
 
-</ScrollView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <LinearLayout
+            android:id = "@+id/container"
+            android:layout_height = "match_parent"
+            android:layout_width = "match_parent"
+            android:orientation = "vertical"
+            > 
+        </LinearLayout>
+        
+    </ScrollView>
+
+</LinearLayout>
