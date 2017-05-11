@@ -37,6 +37,7 @@ public class BrowseActivity extends Activity implements OnClickListener{
 	public void onClick(View view)
 	{
 		if(view.getId() == R.id.searchBtn) onSearchClicked();
+		else onItemClicked(view);
 	}
 	
 	private void onSearchClicked()
@@ -47,14 +48,24 @@ public class BrowseActivity extends Activity implements OnClickListener{
 		System.out.println("search" + txt);
 		
 		LinearLayout container = (LinearLayout) findViewById(R.id.container);
+		
+        container.removeAllViews();
+		
 		for(int i = 0; i < 20; ++i)
 	    {
-			Button btn = new Button(this);
-			btn.setText("item");
-			container.addView(btn);
+			MenuItem item = new MenuItem(this);
+			item.setText("item");
+			item.setCookId("id");
+			item.setOnClickListener(this);
+			container.addView(item);
 		}
 	}
 	
+	public void onItemClicked(View view)
+	{
+		MenuItem item = (MenuItem)view;
+	    System.out.println(item.getCookId());	
+	}
 	
 	private String readLastSearch()
 	{

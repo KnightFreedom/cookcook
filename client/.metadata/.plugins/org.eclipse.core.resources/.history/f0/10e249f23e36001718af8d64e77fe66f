@@ -1,0 +1,8 @@
+package com.likefood.cookcook;
+
+import android.widget.Button;
+
+public class MenuItem extends Button 
+{
+
+}
