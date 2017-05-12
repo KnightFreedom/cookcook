@@ -3,3 +3,5 @@
 1494498784964	Delete element
 1494502798899	Delete element
 1494503131135	Rename local variable 'btn'
+1494562561880	Rename field '_expandView'
+1494566033011	Rename method 'setExpaned'

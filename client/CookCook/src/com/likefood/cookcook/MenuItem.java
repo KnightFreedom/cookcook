@@ -20,4 +20,16 @@ public class MenuItem extends Button
     {
     	_id = id;
     }
+    
+    public void setExpanded(boolean value)
+    {
+    	if(value)
+    	{
+    		super.setBackgroundColor(getSolidColor());
+    	}
+    	
+    	
+    	
+    }
+    
 }
